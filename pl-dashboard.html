@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arbitron + Prediction Sniper P/L Dashboard</title>
+<style>
+  :root { --bg: #0f1419; --card: #1a2332; --border: #2d3a4d; --text: #e7ecf3; --muted: #8b9bb4; --green: #00d4aa; --red: #ff5c5c; --blue: #4da6ff; --accent: #7c5cff; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; padding: 20px; }
+  .header { text-align: center; margin-bottom: 30px; }
+  .header h1 { font-size: 1.8rem; margin-bottom: 6px; }
+  .header .sub { color: var(--muted); font-size: 0.95rem; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 1200px; margin: 0 auto; }
+  @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+  .card h2 { font-size: 1.25rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .metric-row { display: flex; justify-content: space-between; margin: 8px 0; font-size: 0.95rem; }
+  .metric-row .label { color: var(--muted); }
+  .metric-row .value { font-weight: 600; }
+  .positive { color: var(--green); }
+  .negative { color: var(--red); }
+  .neutral { color: var(--blue); }
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 0.85rem; }
+  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 500; }
+  .combined { max-width: 1200px; margin: 20px auto 0; }
+  .update-note { text-align: center; color: var(--muted); font-size: 0.8rem; margin-top: 30px; }
+  .badge { display: inline-block; background: var(--accent); color: white; font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Arbitron + Prediction Sniper P/L Dashboard</h1>
+  <div class="sub">Live snapshot as of Wed, Oct 28, 2026 ~3:18 PM CDT • Data from bot journals & scans</div>
+</div>
+<div class="grid">
+  <div class="card">
+    <h2>Arbitron <span class="badge">Sports Arb</span></h2>
+    <div class="metric-row"><span class="label">Realized Net Profit (All-Time)</span><span class="value positive">+$24.43</span></div>
+    <div class="metric-row"><span class="label">ROI on Staked</span><span class="value positive">+32.57% ($75 staked)</span></div>
+    <div class="metric-row"><span class="label">Record</span><span class="value">2W – 1L</span></div>
+    <div class="metric-row"><span class="label">True Two-Sided Arbs Completed</span><span class="value neutral">$0.00 (0 pairs)</span></div>
+    <div class="metric-row"><span class="label">Waves Balance (CAM719)</span><span class="value">$2,328.14</span></div>
+    <div class="metric-row"><span class="label">Novig Cash</span><span class="value">$10.00</span></div>
+    <div class="metric-row"><span class="label">4Cx</span><span class="value">$2.00</span></div>
+    <h3 style="margin-top:18px; font-size:1rem;">Recent Settled Tickets</h3>
+    <table><thead><tr><th>Event</th><th>Selection</th><th>Stake</th><th>P/L</th></tr></thead><tbody>
+    <tr><td>Sam Houston @ MSU</td><td>Green Jr Under 29.5 Rush</td><td>$25</td><td class="positive">+$27.50</td></tr>
+    <tr><td>Sam Houston @ MSU</td><td>Reed Under 2.5 Rec</td><td>$25</td><td class="negative">-$25.00</td></tr>
+    <tr><td>Blazers @ Lakers</td><td>Sexton Under 10.5 Pts</td><td>$25</td><td class="positive">+$21.93</td></tr>
+    </tbody></table>
+    <h3 style="margin-top:18px; font-size:1rem;">Top Pending Two-Sided Opps</h3>
+    <table><thead><tr><th>Market</th><th>ROI</th><th>Guaranteed</th></tr></thead><tbody>
+    <tr><td>Wendell Carter Jr Assists O/U 2.5</td><td class="positive">+13.23%</td><td class="positive">+$2.78</td></tr>
+    <tr><td>Josh Hart Threes O/U 1.5</td><td class="positive">+7.96%</td><td class="positive">+$1.53</td></tr>
+    <tr><td>Kyrie Irving Rebounds O/U 3.5</td><td class="positive">+7.70%</td><td class="positive">+$1.61</td></tr>
+    </tbody></table>
+  </div>
+  <div class="card">
+    <h2>Prediction Sniper <span class="badge">Prediction Markets</span></h2>
+    <div class="metric-row"><span class="label">Realized P/L (Total)</span><span class="value neutral">$0.00</span></div>
+    <div class="metric-row"><span class="label">Active Open Positions</span><span class="value">0</span></div>
+    <div class="metric-row"><span class="label">Resting Orders</span><span class="value">0</span></div>
+    <div class="metric-row"><span class="label">Queued Allocation (Taker)</span><span class="value">~$82.13</span></div>
+    <div class="metric-row"><span class="label">Bankroll Reference</span><span class="value">$1,000 sizing</span></div>
+    <div class="metric-row"><span class="label">Status</span><span class="value neutral">Kalshi login in progress</span></div>
+    <h3 style="margin-top:18px; font-size:1rem;">Top Queued Signals</h3>
+    <table><thead><tr><th>Market</th><th>Conf</th><th>Size</th><th>EV</th></tr></thead><tbody>
+    <tr><td>Balance of Power Dems Sweep NO</td><td>98</td><td>~$11</td><td class="positive">+15.30%</td></tr>
+    <tr><td>Iowa Gov Zach Lahn NO</td><td>88</td><td>~$25</td><td class="positive">+2.98%</td></tr>
+    <tr><td>AZ-01 Jay Feely NO</td><td>86</td><td>~$8</td><td class="positive">+4.09%</td></tr>
+    <tr><td>NC-11 Jamie Ager YES</td><td>85</td><td>~$9</td><td class="positive">+2.99%</td></tr>
+    </tbody></table>
+    <p style="margin-top:12px; font-size:0.85rem; color:var(--muted);">All signals verified vs Sniper 2.1 filters (Conf ≥80, Rel Size ≥1x, Whale ≥$1k, specialist ROI). No live fills yet.</p>
+  </div>
+</div>
+<div class="card combined">
+  <h2>Combined Desk Snapshot</h2>
+  <div class="metric-row"><span class="label">Total Realized P/L (Both Projects)</span><span class="value positive">+$24.43</span></div>
+  <div class="metric-row"><span class="label">Arbitron Contribution</span><span class="value positive">+$24.43</span></div>
+  <div class="metric-row"><span class="label">Prediction Sniper Contribution</span><span class="value neutral">$0.00</span></div>
+  <div class="metric-row"><span class="label">Primary Funded Books</span><span class="value">Waves $2,328 · Novig $10 · 4Cx $2</span></div>
+  <p style="margin-top:14px; font-size:0.9rem; color:var(--muted);">Arbitron is in strict two-sided-only mode. Prediction Sniper is analyzing only (no live orders). Next two-sided arbs blocked mainly by second-leg funding or Apple login on Novig. Sniper queued plays ready once Kalshi/ProphetX sessions are confirmed.</p>
+</div>
+<div class="update-note">Dashboard generated from bot memory and journal pulls. Refresh by asking for an update or re-running the bots.</div>
+</body>
+</html>
